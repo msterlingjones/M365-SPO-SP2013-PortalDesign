@@ -1,0 +1,27 @@
+/*import base css*/
+@import "SorensonBase.css";
+@import "ZAACT.css";
+
+/*quick launch */
+#sideNavBox #DeltaPlaceHolderLeftNavBar {background: linear-gradient(to top, #3b4e5d 0%,#51728e 58%,#51728e 99%)}
+	.ms-core-listMenu-selected:link,.ms-core-listMenu-selected:visited,.ms-core-listMenu-selected { background-color: rgba(1, 4, 44, 0.38); }
+#WebPartWPQ1 {background: white;}
+/* Top Nav */
+	#titleAreaBox {	background: linear-gradient(to bottom,  #3b4e5d 0%,#51728e 58%,#51728e 99%);	}
+	#titleAreaRow {
+		background: url(http://portal.sorenson.com/sites/InteractiveCare/SiteAssets/images/IC_LogoType.jpg);
+		background-position:90% 40%;
+		background-repeat: no-repeat;
+		background-size: 350px 75px;
+	}
+	.ms-breadcrumb-top { background:rgb(63,84,101);}
+	div#DeltaTopNavigation li:hover { background-color:rgba(63, 101, 68, 0.26);}
+/*Search Box*/
+	#SearchBox {float:right !important;}
+/*Footer*/
+	#sorensonFooter { background: linear-gradient(to bottom,  #3b4e5d 0%,#51728e 58%,#51728e 99%);}
+
+/*Already removed in base css ...
+#ctl00_PlaceHolderMain_WikiField .ms-rte-layoutszone-inner>p {
+    display: none;
+}*/

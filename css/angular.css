@@ -1,0 +1,29 @@
+﻿input[type="text"].ng-invalid-required,input[type="text"].ng-invalid
+{
+	background-image: url(/_layouts/15/images/cell-error.png);
+	background-position: 97% 50%;
+	background-repeat: no-repeat;
+}
+select[required].ng-invalid-required
+{
+	background-image: url(/_layouts/15/images/cell-error.png);
+	background-position: 66% 50%;
+	background-repeat: no-repeat;
+}
+
+
+input.ng-valid-required
+{
+	background-image: url(/_layouts/15/images/check2.gif);
+	background-position: 99% 50%;
+	background-repeat: no-repeat;
+
+}
+
+a.btn-next[disabled='disabled']
+{
+	color:gray;
+	border-color:gray;
+	background:none;
+	cursor:default;
+}

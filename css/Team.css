@@ -1,0 +1,38 @@
+/*import base css*/
+
+@import "SorensonBase.css";
+/*quick launch */
+
+/* #sideNavBox #DeltaPlaceHolderLeftNavBar {
+	background: linear-gradient(to top, #123617 0%, #2F9459 58%, #2F9459 99%);
+} */
+
+div[id*="MenuQuickLaunch"]{
+	background: linear-gradient(to top, #123617 0%, #2F9459 58%, #2F9459 99%);
+}
+
+.ms-core-listMenu-selected:link,
+.ms-core-listMenu-selected:visited,
+.ms-core-listMenu-selected {
+	background-color: rgba(2, 44, 1, 0.38);
+}
+
+/* Top Nav */
+
+#titleAreaBox {
+	background: linear-gradient(to bottom, #123617 0%, #2F9459 58%, #2F9459 99%);
+}
+
+.ms-breadcrumb-top {
+	background: rgb(63, 101, 68);
+}
+
+div#DeltaTopNavigation li:hover {
+	background-color: rgba(63, 101, 68, 0.26);
+}
+
+/*Footer*/
+
+#sorensonFooter {
+	background: linear-gradient(to bottom, #123617 0%, #2F9459 58%, #2F9459 99%);
+}

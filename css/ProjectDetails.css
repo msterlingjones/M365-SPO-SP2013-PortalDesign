@@ -1,0 +1,33 @@
+.rTable {
+    padding: 20px;
+    margin: 20px;
+    width: 650px;
+    height: 30px;
+    padding-top: 3px;
+    margin-left: 30px;
+    margin-Top: 20px
+}
+
+.rTableCaption {
+    font-Size: 20px;
+    font-Weight: bold;
+    text-align: left;
+}
+
+.rHeader {
+    background: #4B6978;
+    border: .5px solid;
+    font-Weight: bold;
+    text-align: center;
+    width: 150px;
+    color: white
+}
+
+#features
+{
+    width: 200px;
+}
+.rCell {
+    text-align: left;
+    padding: 5px 10px;
+}

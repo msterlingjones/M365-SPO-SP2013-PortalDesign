@@ -1,0 +1,337 @@
+/*quick launch */
+
+/*hides side nav only on home or default page of every site*/
+
+.ms-core-sideNavBox-removeLeftMargin {
+    display: none;
+}
+
+/*Displays the side nav as a horizontal links on the system pages like permission groups*/
+
+#sideNavBox {
+    float: none;
+    margin: 0px;
+    max-width: 100%;
+    position: relative;
+    top: -4px;
+    display:inline;
+}
+
+div#sideNavBox[id*="MenuQuickLaunch"]  {
+    display: block;
+}
+
+.ms-core-listMenu-verticalBox>.ms-core-listMenu-item,
+.ms-core-listMenu-verticalBox li.static>.ms-core-listMenu-item {
+    padding: 1px;
+}
+
+.ms-core-listMenu-verticalBox li.static>ul.static>li.static>.ms-core-listMenu-item {
+    padding: 0px 15px 0px 15px;
+}
+
+div[id*="MenuQuickLaunch"]>ul[id *="RootAspMenu"] ul {
+    padding-left: 20px;
+}
+
+div[id*="MenuQuickLaunch"]>ul[id *="RootAspMenu"] ul>li.static {
+    display: inline;
+}
+
+div[id*=MenuQuickLaunch]>ul[id *=RootAspMenu] li.static>.ms-core-listMenu-item {
+    display: inline-block !important;
+}
+
+div[id*=MenuQuickLaunch] ul[id *=RootAspMenu]>li.static>a.static {
+    font-style: bold;
+    font-size: x-large;
+}
+
+/*Displays the side nav as block element on search pages*/
+
+#sideNavBox #Refinement {
+    padding: 2px;
+    display: block;
+    background-color: white;
+    width:200px;
+}
+
+/*moves search results to top and right of refiners*/
+
+.ms-srch-siteSearchResults {
+    position: relative;
+    top: -640px;
+    left: 200px;
+    /* padding:20px; */
+    background-color: white;
+    z-index:100;
+}
+
+/*site search and suite bar icons*/
+
+/* #DeltaPlaceHolderSearchArea,
+#searchInputBox {
+    display: block;
+} */
+
+#titleAreaRow .ms-tableCell.ms-verticalAlignTop {
+    display:block;
+    max-height:50px;
+}
+#SearchBox{
+    position: relative;
+    z-index: 100;
+    border-color: white;
+    top:8px;
+}
+#SearchBox .ms-srch-sb {
+    background-color: white;
+}
+/* #DeltaPlaceHolderSearchArea{
+    display: block; 
+    position: relative;
+    top:55px;
+    background: rgb(63,84,101);
+    height: 32px;
+} 
+
+.ms-srch-sb-border {
+    border: 1px solid #fffdfd;
+}
+.ms-helperText, input.ms-helperText {
+    color:white;
+}*/
+
+div[webpartid="666af752-3b66-4e7c-b1e7-192a6fc09c68"] {
+    margin: auto;
+    width: 500px;
+    margin-top: 40px;
+}
+
+span#ms-help img,
+span#ms-help span,
+span#ms-help a {
+    box-sizing: content-box;
+}
+
+/*Title row, Site Icon, & other */
+
+#s4-titlerow {
+    padding-top: 0px;
+}
+
+#titleAreaRow {
+    background: url(http://www.sorenson.com/assets/images/ver2/sorenson_logo.png);
+    background-position: 90% 40%;
+    background-repeat: no-repeat;
+    height: 55px;
+}
+
+h1#pageTitle {
+    padding: 0px 15px;
+    color: white;
+    position: relative;
+    top: -25px;
+    border-bottom: 0px;
+    margin: 0px;
+}
+
+#siteIcon {
+    display: none !important;
+}
+
+/* Removed for Interactive Care 
+#ctl00_PlaceHolderMain_WikiField .ms-rte-layoutszone-inner>p {
+    display: none;
+}*/
+
+/*------  Top Nav ------ */
+
+.ms-navedit-editSpan {
+    display: none;
+}
+
+#titleAreaBox {
+    margin: 0;
+    width: 100%;
+}
+
+.ms-breadcrumb-box {
+    height: auto;
+}
+
+.ms-breadcrumb-top {
+    padding: 0px;
+    text-align: center;
+    position: relative;
+    top: 55px;
+}
+
+[id *=RootAspMenu]>li.static {
+    line-height: 30px;
+}
+
+.menu-item-text {
+    color: white !important;
+    text-align: center !important;
+}
+
+ul.dynamic {
+    padding: 1px;
+}
+
+li.dynamic {
+    line-height: 15px;
+    text-align: justify;
+    padding: 5px 5px;
+    border: 0px
+}
+
+li.dynamic span.menu-item-text {
+    color: black !important;
+}
+
+/* Main Content Area container*/
+#s4-workspace {
+    height: auto;
+    overflow-x: scroll;
+}
+
+#contentBox {
+    padding: 10px 20px;
+    margin: auto;
+}
+
+.ms-rte-layoutszone-inner {
+    border: 0px;
+    margin: 0px;
+}
+
+.ms-wikicontent {
+    padding-right: 0px !important;
+}
+
+/* Page Description Title */
+
+span#DeltaPlaceHolderPageTitleInTitleArea a {
+    color: white;
+}
+
+/*Main Body Content*/
+.ms-webpartPage-root { border-spacing: 2px;}
+
+/*Portal Search Bar ---- styles for this element are inline CSS (embedded on '/siteassets/home.html') because the element id is not unique across all sites*/
+
+/* dialog close button */
+
+#dlgTitleBtns .s4-clust {
+    left: -15px;
+}
+
+/*Task Webparts*/
+
+.cbs-Detail {
+    margin-left: 10px;
+}
+
+.ms-webpart-chrome-title {
+    border-bottom: 1px solid #808083;
+}
+
+table.ms-listviewtable tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+/* Forms and h tags that are not web part titles */
+
+iv[id*=FormControl] h1,
+div[id*=FormControl] h2,
+div[id*=FormControl] h3,
+div[id*=FormControl] h4,
+div[id*=FormControl] h5,
+div[id*=FormControl] h6 {
+    border-bottom: 0px;
+    text-transform: none;
+}
+
+td.ms-formbody span>textarea.ms-long {
+    width: 100% !important;
+}
+
+td.ms-formbody {
+    padding-right: 20px;
+}
+
+span.ms-metadata {
+    font-style: italic;
+}
+
+div#IT-question {
+    margin: auto;
+    width: 500px;
+}
+
+/*Footer*/
+
+/* #s4-bodyContainer {
+    padding-bottom: 80px !important;
+    position: relative;
+    min-height: 95%;
+} */
+
+@media only screen and (max-height: 700px) {
+    #s4-bodyContainer {
+        padding-bottom: 80px !important;
+        position: relative;
+        min-height: 95%;
+    }
+}
+/*Footer*/
+
+#sorensonFooter {
+    background: linear-gradient(to bottom, #3b4e5d 0%, #51728e 58%, #51728e 99%);
+    /* margin-top:10px; */
+    width: 100%;
+    position: fixed;
+    left: -.5px;
+    bottom: 0px;
+    /* overflow:hidden; */
+    padding-top: 5px;
+}
+
+div#sorensonFooter:hover #sorensonFooterBox {height: 80px;}
+
+div#sorensonFooter:hover #sorensonFooterLinkBox {display:block;}
+
+#sorensonFooterBox{height:10px; transition-duration: 0.300s;}
+
+#sorensonFooterLinkBox {
+    margin: 10px auto;
+    width: 400px;
+    text-align: center;
+    display:none;
+}
+
+#sorensonFooterLinks {
+    line-height: 30px;
+    /*color: white;*/
+    white-space: nowrap;
+}
+
+#sorensonFooterLinks>a { color: white; }
+
+#sorensonFooterLogo {
+    margin: 0 auto;
+    display: block;
+    border-style: none;
+    /* padding: 0 0 10px 0; */
+}
+
+/*angular apps
+.ng-scope { padding-top: 5px;}*/
+
+/* Styles on promoted links web part */
+
+.ms-promlink-body>div>div{
+    border-radius: 10px;
+}

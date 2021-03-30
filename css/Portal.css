@@ -1,0 +1,32 @@
+/*import base css*/
+
+@import "SorensonBase.css";
+@import "ZAACT.css";
+/*quick launch */
+
+/* #sideNavBox #DeltaPlaceHolderLeftNavBar {
+	background: linear-gradient(to top, #3b4e5d 0%, #51728e 58%, #51728e 99%)
+} */
+div[id*="MenuQuickLaunch"]{
+	background: linear-gradient(to top, #3b4e5d 0%, #51728e 58%, #51728e 99%)
+}
+
+.ms-core-listMenu-selected:link,
+.ms-core-listMenu-selected:visited,
+.ms-core-listMenu-selected {
+	background-color: rgba(1, 4, 44, 0.38);
+}
+
+/* Top Nav */
+
+#titleAreaBox {
+	background: linear-gradient(to bottom, #3b4e5d 0%, #51728e 58%, #51728e 99%);
+}
+
+.ms-breadcrumb-top {
+	background: rgb(63, 84, 101);
+}
+
+div#DeltaTopNavigation li:hover {
+	background-color: rgba(63, 101, 68, 0.26);
+}
