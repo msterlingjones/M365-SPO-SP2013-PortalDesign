@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--dependencies -->
+        
+        <!--Jquery CDN-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script> 
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+        
+        <!--Hillbilly CDN-->
+        <script type="text/javascript" src="http://www.markrackley.net/scripts/jquery.HillbillyTabs.2013.js"></script> 
+        
+        <!--Jquery CSS CDN-->
+        <link  type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/start/jquery-ui.css" /> 
+    </head>
+<body>
+
+<div id="tabsContainer"></div>
+
+<script type="text/javascript">
+     jQuery(document).ready(function($) {
+
+        //Put 2 or more web parts each in different tabs
+        var webPartTitles = ["My Assessments Results", "Resource Library"];
+
+        //Create a Tab with Two Web Parts, and a second tab with one Web Part
+        //var webPartTitles = ["Tab Title;#Web Part Title 1;#Web Part Title 2","Web Part Title 3"];
+        HillbillyTabs(webPartTitles);
+     
+        //Put all web parts (that have visible titles) in current zone into tabs 
+        //HillbillyTabs();
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+<script crossorigin src="http://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="http://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.min.js"></script>-->
+
+<div id="root"></div> 
+<div id="root2"></div>
+
+<script type="text/javascript">
+const element1 = React.createElement(
+    'h1',
+    null,
+    'Hello, world!'
+  );
+  const container = document.getElementById('root');
+  ReactDOM.render(element1, container);
+
+const element2 = React.createElement(
+  'h1',
+  null,
+  'I am Matheus!!!'
+);
+ReactDOM.render(element2, document.getElementById('root2'));
+</script>

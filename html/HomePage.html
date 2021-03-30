@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/siteassets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/SiteAssets/css/Portal.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:600,400">
+    <link rel="stylesheet" type="text/css" href="/_layouts/15/ITG.SVRS/css/jquery-ui.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/SiteAssets/scripts/Dependencies/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/angular.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/angular.date.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/AngularSP.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/ITG.SVRS/js/js.cookie.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/siteassets/scripts/dependencies/HomeApp.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/SiteAssets/Solutions/Announcements/AnnouncementsController.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/SiteAssets/Solutions/LaunchPad/LinksController.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/siteassets/scripts/dependencies/jquery.knob.min.js"></script>
+    <script type="text/javascript" src="http://portal.sorenson.com/siteassets/scripts/dependencies/cust-main.js"></script>
+    <script>
+        window.onload = function () {
+            var deliverableLink =
+                "<h2 style=\"text-align:justify;\" class=\"ms-webpart-titleText\"><a href=\"javascript:OpenPopUpPage('http://portal.sorenson.com/Pages/MyDeliverables.aspx')\" ><nobr><span>My SPEED Deliverables</span><span id=\"WebPartCaptionWPQ8\"></span></nobr></a></h2>";
+            var tasksLink =
+                "<h2 style=\"text-align:justify;\" class=\"ms-webpart-titleText\"><a href=\"javascript:OpenPopUpPage('http://portal.sorenson.com/Pages/MyTasks.aspx')\" ><nobr><span>My Tasks</span><span id=\"WebPartCaptionWPQ5\"></span></nobr></a></h2>";
+            document.getElementById("WebPartTitleWPQ8").innerHTML = deliverableLink;
+            document.getElementById("WebPartTitleWPQ5").innerHTML = tasksLink;
+        }
+    </script>
+    <style>
+        #MSOZoneCell_WebPartWPQ2 {
+            margin: auto;
+            width: 500px;
+            margin-top: 40px;
+        }
+
+        @media only screen and (max-height: 1500px) {
+            #s4-bodyContainer {
+                padding-bottom: 80px !important;
+                position: relative;
+                min-height: 100%;
+            }
+        }
+
+        .container * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .col-lg-12 .carousel-theme {
+            display: inline-block;
+        }
+
+        .carousel-caption {
+            background: rgba(53, 71, 86, 0.5);
+            min-height: 100px;
+        }
+
+        .preview-controls {
+            position: absolute;
+            left: 725px;
+            z-index: 500;
+            height: 40px;
+            width: 90%;
+            top: .5px;
+            display: inline-flex;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .preview-controls {
+                left: 625px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .preview-controls {
+                left: 525px;
+            }
+        }
+
+        .all-news {
+            top: 2px;
+        }
+
+        .preview-thumb {
+            max-height: 40px;
+            max-width: 40px;
+        }
+
+        .item {
+            background: #354756;
+        }
+
+        .item>img {
+            min-height: 50px;
+            max-height: 100px;
+            margin: auto;
+        }
+
+        ul.dfwp-list>li>div.item {
+            background-color: white;
+        }
+
+        div.launch-list {
+            margin: 0 auto;
+
+        }
+
+        ul.clearfix {
+            text-align: center;
+
+        }
+
+        ul>li.ng-scope {
+            padding: 0px 15px;
+            display: inline-block;
+            width: fit-content(30px);
+        }
+
+        /*The following rule applies to IT Home page only due to the publishing site template "web part layout", which throws off the layout in Firfox only*/
+
+        @-moz-document url-prefix() {
+            .tableCol-25 {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row" ng-controller="NewsController" ng-cloak="" ng-show="Display">
+                <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                    <div class="col-lg-12 carousel-theme">
+                        <span class="theme-name">Announcements</span>
+                        <div class="preview-controls">
+                            <div>
+                                <a href="javascript:OpenPopUpPage('/lists/announcements/newspaper.aspx')" class="all-news">View All
+                                    <span class="btn-view-all"></span>
+                                </a>
+                            </div>
+                            <div class="preview-arrows">
+                                <a class="slide-left" href="#carousel-slider" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="slide-right" href="#carousel-slider" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <!--End .preview-arrows-->
+                        </div>
+                        <!--End .preview-controls-->
+                    </div>
+                    <div class="col-lg-5 col-md-5 news-preview">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-slider" data-slide-to="{{$index}}" ng-class="{active:$index==0}" ng-mouseenter="hover = true"
+                                ng-mouseleave="hover = false" ng-repeat="news in newsArr">
+                                <div class="preview-content">
+                                    <span>
+                                        <img class="preview-thumb" ng-src="{{news.ImageUrl}}?renditionid=1" alt="{{news.Title}}" />
+                                    </span>
+                                    <h3>{{news.Title}}</h3>
+                                    <!--<span class="preview-category" ng-repeat="category in news.PostCategory">{{category.get_lookupValue()}}</span>-->
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!--End .col-xs-4 news-preview-->
+                    <div class="col-lg-7 col-md-7 news-stories">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item" ng-repeat="news in newsArr" ng-class="{'item active':$index==0}">
+                                <img ng-src="{{news.ImageUrl}}?renditionid=1" alt="{{news.Title}}" />
+                                <div class="carousel-caption">
+                                    <!--<img ng-src="{{news.ArticleImage.get_url()}}?renditionid=6" alt="{{news.Title}}" />-->
+                                    <h1>{{news.Title}}</h1>
+                                    <span class="article-date">{{news.DisplayDate}}</span>
+                                    <span class="article-author">Author: {{news.Author.get_lookupValue()}}</span>
+                                    <span class="article-category" ng-repeat="category in news.PostCategory">{{category.get_lookupValue()}}</span>
+                                    <p>{{news.BodyText | characters:175}}
+                                        <a href="/Lists/Announcements/DispForm.aspx?ID={{news.ID}}" target="_self">Read More</a>
+                                    </p>
+                                </div>
+                                <!--End .carsousel-caption-->
+                            </div>
+                            <!--End .item-->
+                        </div>
+                        <!--End .carsousel-inner-->
+                    </div>
+                    <!--End .news-stories-->
+                </div>
+                <!--End .carousel-->
+            </div>
+            <!--End .row-->
+            <div ng-controller="LinksController" ng-cloak="" ng-show="Display">
+                <div class="row">
+                    <div class="col-lg-12 launchpad-head">
+                        <h3>
+                            <a href="javascript:OpenPopUpPage('/Lists/LaunchpadLinks/display.aspx')" target="_self">
+                                Launch Pad</a>
+                        </h3>
+                    </div>
+                    <!--End .launchpad-head-->
+                    <div class="col-lg-12 launch-list">
+                        <ul class="clearfix">
+                            <li ng-repeat="link in Links">
+                                <a target="_self" ng-href="{{link.URL.get_url()}}">
+                                    <span class="lp-ico-wrap">
+                                        <span class="lp-icon {{link.LinkClass}}"></span>
+                                    </span>
+                                    <span class="lp-name">{{link.Title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End .launch-list-->
+                </div>
+            </div>
+            <!--End .row-->
+        </div>
+        <!-- End .containter -->
+    </div>
+</body>
+
+</html>
